@@ -70,7 +70,9 @@ public class ScoreBoardForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+    public void setValue(int noOfBalls, int score){
+        System.out.println("Score Board Form : values received "+noOfBalls+" - "+score);
+    }
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

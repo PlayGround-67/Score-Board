@@ -4,6 +4,7 @@
  */
 package scoreboard;
 
+import scoreboard.controllRoom.Controller;
 import scoreboard.view.MainForm;
 import scoreboard.view.RunrateForm;
 import scoreboard.view.ScoreBoardForm;
@@ -28,6 +29,10 @@ public class AppInitializer {
         
         RunrateForm runrateForm = new RunrateForm();
         runrateForm.setVisible(true);
+        
+        new Controller(scoreBoardForm,runrateForm);
+        
+        
     }
     
 }
