@@ -4,6 +4,10 @@
  */
 package scoreboard;
 
+import scoreboard.view.MainForm;
+import scoreboard.view.RunrateForm;
+import scoreboard.view.ScoreBoardForm;
+
 /**
  *
  * @author shan
@@ -15,6 +19,15 @@ public class AppInitializer {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MainForm mainForm = new MainForm();
+        mainForm.setVisible(true);
+        
+        
+        ScoreBoardForm scoreBoardForm = new ScoreBoardForm();
+        scoreBoardForm.setVisible(true);
+        
+        RunrateForm runrateForm = new RunrateForm();
+        runrateForm.setVisible(true);
     }
     
 }
