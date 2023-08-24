@@ -4,6 +4,8 @@
  */
 package scoreboard.view;
 
+import scoreboard.controllRoom.Controller;
+
 /**
  *
  * @author shan
@@ -16,7 +18,18 @@ public class MainForm extends javax.swing.JFrame {
     public MainForm() {
         initComponents();
     }
+    
+    private Controller controller;
 
+    public Controller getController() {
+        return controller;
+    }
+
+    public void setController(Controller controller) {
+        this.controller = controller;
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,7 +52,7 @@ public class MainForm extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 36)); // NOI18N
         jLabel1.setText("Live Score Board");
 
-        btnCalc.setText("Calculate");
+        btnCalc.setText("Send");
         btnCalc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCalcActionPerformed(evt);
@@ -110,6 +123,12 @@ public class MainForm extends javax.swing.JFrame {
 
     private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
         // TODO add your handling code here:
+        int noOfBalls = Integer.parseInt(txtBalls.getText());
+        int score = Integer.parseInt(txtScore.getText());
+        
+        System.out.println("MainForm -> Controller");
+   controller.sendValue(noOfBalls, score);
+        System.out.println("-----------------------------------------------");
     }//GEN-LAST:event_btnCalcActionPerformed
 
     /**

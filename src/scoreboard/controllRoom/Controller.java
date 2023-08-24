@@ -15,15 +15,17 @@ public class Controller {
     RunrateForm runrateForm;
     ScoreBoardForm scoreBoardForm;
     
-    Controller(){}
+   public Controller(){}
     
-    Controller(RunrateForm runrateForm, ScoreBoardForm scoreBoardForm){
+   public Controller(RunrateForm runrateForm, ScoreBoardForm scoreBoardForm){
         this.runrateForm = runrateForm;
         this.scoreBoardForm = scoreBoardForm;
     }
    
     public void sendValue(int noOfBalls , int score){
         //distributer
+        System.out.println("Controller distribute");
+        
         runrateForm.setValue(noOfBalls,score);
         scoreBoardForm.setValue(noOfBalls,score);
     }
